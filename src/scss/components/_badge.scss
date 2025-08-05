@@ -1,25 +1,16 @@
-.badge{
-    display: inline-block;
-    min-width: 96px;
-    padding: 4px 8px;
+// @use "../utils/mixin";
+// @use "../utils/variables" as v;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.07px;
-    text-align: center;
-    color: #ffff;
-    border-radius: 20px;
+@use "../utils" as frwd;
+
+.badge {
+  @include frwd.badge-base();
+
+//   color: v.$badge-cl;
 }
 
-.badge-completed{
-    background-color:#a461d8;
-}
+//  
 
-.badge-ended{
-    background-color:#fc5a5a;
-}
-
-.badge-active{
-    background-color:#82c43c;
+.badge-active {
+  background-color: frwd.$active;
 }
